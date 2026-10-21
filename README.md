@@ -1,40 +1,26 @@
-# 🐱🐶 Cat vs. Dog Image Classification & Model Benchmarking
+# 🩺 تصنيف أمراض الكلى باستخدام التعلم العميق
 
-A machine-learning project that uses **OpenCV** and **Scikit-Learn** to classify cat and dog images based on handcrafted visual features. The project extracts color-based and shape-based features, applies **StandardScaler** and **Principal Component Analysis (PCA)** for dimensionality reduction, and trains multiple classical machine-learning classifiers for comparison.
+مشروع تعلّم عميق لتصنيف صور الأشعة المقطعية للكلى.
 
-The complete pipeline covers **feature extraction → preprocessing → dimensionality reduction → model training → evaluation → visual prediction**.
+## 📊 النتائج
+- دقة التدريب: 100%
+- دقة التحقق: 99%
+- F1-Score: 0.99
 
----
+## 🛠️ التقنيات
+- TensorFlow 2.21
+- VGG16 (Transfer Learning)
+- Flask
+- Google Colab
 
-## 📌 Features
+## 📁 الملفات
+- app.py: تطبيق Flask
+- requirements.txt: المكتبات
 
-- **Feature Extraction:** Extracts color statistics (Mean BGR, Standard Deviation, and 3D HSV Color Histograms) combined with **HOG (Histogram of Oriented Gradients)** descriptors for shape and edge information.
+## 📈 مصفوفة الالتباس
+[[47 1]
+ [ 0 45]]
 
-- **Preprocessing & Dimensionality Reduction:** Applies `StandardScaler` followed by **PCA (Principal Component Analysis)** to reduce feature dimensionality and mitigate the curse of dimensionality.
 
-- **Multi-Model Benchmarking:** Trains and compares four classical machine-learning classifiers:
-  - Random Forest Classifier
-  - Support Vector Machine (SVM)
-  - K-Nearest Neighbors (KNN)
-  - Decision Tree Classifier
-  - **Voting Classifier (soft voting)** — combines the strongest base models to improve overall accuracy and stability.
 
-- **Model Evaluation:** Evaluates classifiers using **Accuracy, Precision, Recall, and F1-Score** via **Stratified K-Fold Cross-Validation (5-fold)** for more reliable results than a single train/test split.
-
-- **Visual Inference:** Uses OpenCV to display predicted classes and predicted class probabilities directly on test images.
-
----
-
-## 🛠️ Technologies Used
-
-- Python 3
-- OpenCV (cv2)
-- NumPy
-- Pandas
-- Scikit-Learn
-- Scikit-Image (skimage) — for HOG features
-- Matplotlib
-
----
-
-## 📁 Project Structure
+> **🔗 [اضغط هنا لتجربة النموذج مباشرة](https://2a0fa31c7c4cf51496.gradio.live)

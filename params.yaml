@@ -1,0 +1,29 @@
+# Data Ingestion Parameters
+data_ingestion:
+  source_URL: "https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing"
+  local_data_file: "data/kidney-ct-scan-image.zip"
+  unzip_dir: "data/kidney-ct-scan-image"
+
+# Prepare Base Model Parameters
+prepare_base_model:
+  base_model: "VGG16"
+  include_top: false
+  weights: "imagenet"
+  input_shape: [224, 224, 3]
+  classes: 2
+  learning_rate: 0.0001
+
+# Training Parameters
+training:
+  img_size: [224, 224]
+  batch_size: 16
+  epochs: 20
+  validation_split: 0.2
+  learning_rate: 0.0001
+  augmentation: true
+  dropout: 0.5
+
+# Model Evaluation Parameters
+evaluation:
+  batch_size: 16
+  target_accuracy: 0.90
